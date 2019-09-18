@@ -4,8 +4,77 @@
     </head>
     
     <body>
-        <p>
-            I am a new tab
-        </p>
+        <div class="title">
+            I am new tab
+        </div>
+
+        <div>
+            <a 
+                class="gmail-image-container"
+                href="https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox"
+            >
+                <img 
+                    src="https://lh3.googleusercontent.com/-vnBj1MjNxC0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reoFFIZbaS5wUPnHAXlcrwxjETNww/photo.jpg?sz=96"
+                    
+                >
+                <p>
+                    Gmail
+                </p>
+            </a>
+
+            <a 
+                class="gmail-image-container"
+                href="https://mail.google.com/mail/u/1/?tab=wm&ogbl#inbox"
+            >
+                <img 
+                    src="https://lh3.googleusercontent.com/-KnqndWgTIAw/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reQEIUnMjp8JWmihAkk1ImtN2861w/photo.jpg?sz=96"
+                >
+                <p>
+                    Gmail
+                </p>
+            </a>
+        </div>
+
+        <!-- https://mail.google.com/mail/?tab=wm&authuser=0&ogbl -->
     </body>
+
+    <style>
+        body {
+            background-color: #333;
+            text-align: center;
+            color: #00FF00;
+            padding-top: 5%;
+            font-size: 3rem;
+        }
+    
+        .title {
+            margin-bottom: 5%;
+        }
+
+        .gmail-image-container {
+            margin-right: 6rem;
+            margin-left: 6rem;
+            display: inline-block;
+            font-size: 1rem;
+            text-decoration: none;
+
+        }
+
+        .gmail-image-container img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+        }
+
+        .gmail-image-container p {
+            display: block;
+            margin-top: 0.5rem;
+            color: #008800;
+        }
+
+        .gmail-image-container p:hover {
+            text-decoration: underline;
+            text-decoration-color: green;
+        }
+    </style>
 </html>
