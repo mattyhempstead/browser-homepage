@@ -9,6 +9,7 @@
 7. Done!
 
 ## Notes
+ - All javascript execution must occur in local .js files (rather than inside index.html) due to Chrome's Content Security Policy.
  - This extension will actually live update directly from the browser-homepage/src directory, so there is no need to ever reload/refresh the extension (unless you decide to change the manifest.json for some reason).
  - You should disable any other chrome extensions which take control over the new tab page for chrome.
  - Most other chrome extensions will not work on this page.
