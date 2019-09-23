@@ -20,7 +20,7 @@ chrome.storage.sync.get('page_open_counter', data => {
   }, () => {
     chrome.storage.sync.get('page_open_counter', newData => {
       console.log('page_open_counter:', newData['page_open_counter'])
-      document.getElementById('page-open-counter').innerHTML = `You have New Tabbed ${newData['page_open_counter']} times.`
+      document.getElementById('page-open-counter').innerHTML = `New Tab #${newData['page_open_counter']}`
     })
   })
 })
