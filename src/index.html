@@ -5,10 +5,12 @@
 
     <body>
         <div class="title">
-            I am New Tab
+            New Tab
         </div>
 
-        <div>
+        <div id="bitcoin-price"></div>
+
+        <div class="top-left">
             <a 
                 class="gmail-image-container"
                 href="https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox"
@@ -35,10 +37,6 @@
             </a>
         </div>
 
-        <div id="bitcoin-price">
-            Loading...
-        </div>
-
         <div id="page-open-counter"></div>
 
         <script src="script.js"></script>
@@ -46,29 +44,38 @@
 
     <style>
         body {
-            background-color: #333;
+            background-image: url("space-background.jpg");
+            /* background-color: #000; */
             text-align: center;
             color: #00FF00;
-            padding-top: 5%;
-            font-size: 3rem;
+            font-size: 2rem;
+            font-family: monospace;
         }
     
         .title {
-            margin-bottom: 5%;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            font-size: 3rem;
+        }
+
+        .top-left {
+            position: absolute;
+            left: 2em;
+            top: 1.5em;
         }
 
         .gmail-image-container {
-            margin-right: 6rem;
-            margin-left: 6rem;
+            margin-right: 3rem;
+            /* margin-left: 3rem; */
             display: inline-block;
-            font-size: 1rem;
+            font-size: 1.2rem;
             text-decoration: none;
 
         }
 
         .gmail-image-container img {
-            width: 6rem;
-            height: 6rem;
+            width: 5vw;
+            height: 5vw;
             border-radius: 50%;
         }
 
@@ -78,21 +85,20 @@
             color: #008800;
         }
 
-        .gmail-image-container p:hover {
+        .gmail-image-container:hover {
             text-decoration: underline;
             text-decoration-color: green;
         }
 
         #bitcoin-price {
-            margin-top: 5%;
-            font-size: 0.5em;
+            margin-top: 60vh;
         }
 
         #page-open-counter {
             position: absolute;
             right: 1em;
             top: 1em;
-            font-size: 0.5em;
+            font-size: 1em;
         }
     </style>
 </html>
