@@ -1,6 +1,14 @@
 <html>
     <head>
         <title>New Tab</title>
+        
+        <!-- Load background styles at top of page to prevent white flashes -->
+        <style>
+            body {
+                background-color: #000;
+            }
+        </style>
+        <link rel="stylesheet" href="index.css">        
     </head>
 
     <body>
@@ -39,67 +47,7 @@
 
         <div id="page-open-counter"></div>
 
+        <!-- Run scripts after defining DOM elements? -->
         <script src="script.js"></script>
     </body>
-
-    <style>
-        body {
-            background-image: url("space-background.jpg");
-            /* background-color: #000; */
-            text-align: center;
-            color: #00FF00;
-            font-size: 2rem;
-            font-family: monospace;
-            overflow: hidden;
-        }
-    
-        .title {
-            margin-top: 5vh;
-            margin-bottom: 5vh;
-            font-size: 3rem;
-        }
-
-        .top-left {
-            position: absolute;
-            left: 2em;
-            top: 1.5em;
-        }
-
-        .gmail-image-container {
-            margin-right: 3rem;
-            /* margin-left: 3rem; */
-            display: inline-block;
-            font-size: 1.2rem;
-            text-decoration: none;
-
-        }
-
-        .gmail-image-container img {
-            width: 5vw;
-            height: 5vw;
-            border-radius: 50%;
-        }
-
-        .gmail-image-container p {
-            display: block;
-            margin-top: 0.5rem;
-            color: #008800;
-        }
-
-        .gmail-image-container:hover {
-            text-decoration: underline;
-            text-decoration-color: green;
-        }
-
-        #bitcoin-price {
-            margin-top: 60vh;
-        }
-
-        #page-open-counter {
-            position: absolute;
-            right: 1em;
-            top: 1em;
-            font-size: 1em;
-        }
-    </style>
 </html>
