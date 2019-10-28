@@ -10,5 +10,34 @@
         "*://*/",
         "storage"
     ],
+    "commands": {
+        "hotkey-1": {
+            "description": "Hotkey 1"
+        },
+        "hotkey-2": {
+            "description": "Hotkey 2"
+        },
+        "hotkey-3": {
+            "description": "Hotkey 3"
+        },
+        "hotkey-4": {
+            "description": "Hotkey 4"
+        },
+        "hotkey-5": {
+            "description": "Hotkey 5"
+        },
+        "hotkey-6": {
+            "description": "Hotkey 6"
+        },
+        "hotkey-7": {
+            "description": "Hotkey 7"
+        },
+        "hotkey-8": {
+            "description": "Hotkey 8"
+        },
+        "hotkey-9": {
+            "description": "Hotkey 9"
+        }
+    },
     "manifest_version": 2
 }
