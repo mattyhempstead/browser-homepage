@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("space-background.jpg");
+    background-image: url("../space-background.jpg");
     text-align: center;
     color: #00FF00;
     font-size: 2rem;
@@ -55,4 +55,30 @@ body {
     right: 1em;
     top: 1em;
     font-size: 1em;
+}
+
+
+#url-hotkeys {
+    margin: auto;
+    margin-top: 7em;
+    width: 60%;
+    display: table;
+    table-layout: fixed;
+}
+
+#url-hotkeys > span {
+    display: table-cell;
+    text-align: center;
+}
+
+#url-hotkeys > span > span:first-child {
+    display: block;
+}
+
+#url-hotkeys > span > span:last-child {
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: darkgreen;
 }
