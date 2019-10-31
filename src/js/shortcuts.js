@@ -41,7 +41,8 @@ chrome.commands.getAll((cmds) => {
     // Skip shortcut if url does not exist
     if (shortcutIndex >= shortcuts.length) break;
 
-    const hotkeySpan = document.createElement('span')
+    const hotkeySpan = document.createElement('a')
+    hotkeySpan.setAttribute('href', shortcuts[shortcutIndex].url)
     hotkeysContainer.appendChild(hotkeySpan)
 
     // Add name element

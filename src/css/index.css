@@ -66,16 +66,23 @@ body {
     table-layout: fixed;
 }
 
-#url-hotkeys > span {
+#url-hotkeys > a {
     display: table-cell;
     text-align: center;
+    text-decoration: none;
 }
 
-#url-hotkeys > span > span:first-child {
+#url-hotkeys > a:hover {
+    text-decoration: underline;
+    text-decoration-color: darkgreen;
+}
+
+#url-hotkeys > a > span:first-child {
     display: block;
+    color: green;
 }
 
-#url-hotkeys > span > span:last-child {
+#url-hotkeys > a > span:last-child {
     display: block;
     font-style: italic;
     margin-top: 10px;
