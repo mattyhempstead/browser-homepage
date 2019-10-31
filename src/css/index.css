@@ -79,7 +79,7 @@ body {
 
 #url-hotkeys > a > span:first-child {
     display: block;
-    color: green;
+    color: #0F0;
 }
 
 #url-hotkeys > a > span:last-child {
