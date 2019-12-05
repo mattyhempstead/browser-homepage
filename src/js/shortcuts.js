@@ -2,31 +2,35 @@
  * Add shortcuts to open webpages
  */
 
+/*
+  Shortcut images can be fetched with http://favicongrabber.com/api/grab/<website url>
+  All shortcut icons should be saved in /resources/shortcut-icons
+*/
 const shortcuts = [
   {
     url: 'https://www.facebook.com/messages/',
     name: 'Messenger',
-    img: ''
+    img: 'messenger.ico'
   },{
     url: 'https://www.youtube.com/?gl=US',
     name: 'Youtube',
-    img: ''
+    img: 'youtube.png'
   },{
     url: 'https://canvas.sydney.edu.au/',
     name: 'Canvas',
-    img: ''
+    img: 'canvas.jpg'
   },{
     url: 'https://edstem.org/dashboard',
     name: 'Edstem',
-    img: ''
+    img: 'edstem.png'
   }
 ]
 
 chrome.commands.onCommand.addListener((cmd) => {
   const hotkeyNum = parseInt(cmd.split('-')[1])
   if (hotkeyNum <= shortcuts.length) {
-    const url = shortcuts[hotkeyNum - 1].url
-    window.open(url, '_top')  
+    shortcuts[hotkeyNum - 1].link.click()
+    console.log('click')
   }
 })
 
@@ -41,14 +45,22 @@ chrome.commands.getAll((cmds) => {
     // Skip shortcut if url does not exist
     if (shortcutIndex >= shortcuts.length) break;
 
+    const shortcut = shortcuts[shortcutIndex]
+
     const hotkeySpan = document.createElement('a')
-    hotkeySpan.setAttribute('href', shortcuts[shortcutIndex].url)
+    hotkeySpan.setAttribute('href', shortcut.url)
     hotkeysContainer.appendChild(hotkeySpan)
+    shortcut.link = hotkeySpan
+
+    // Add icon element
+    const icon = document.createElement('img')
+    hotkeySpan.appendChild(icon)
+    icon.src = 'resources/shortcut-icons/' + shortcut.img
 
     // Add name element
     const nameText = document.createElement('span')
     hotkeySpan.appendChild(nameText)
-    nameText.innerHTML = shortcuts[shortcutIndex].name
+    nameText.innerHTML = shortcut.name
 
     // Add hotkey element
     const hotkeyText = document.createElement('span')
