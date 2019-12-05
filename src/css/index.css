@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../space-background.jpg");
+    background-color: #000;
     text-align: center;
     color: #00FF00;
     font-size: 2rem;
@@ -62,6 +62,7 @@ body {
     margin: auto;
     margin-top: 7em;
     width: 60%;
+    min-width: 24em;
     display: table;
     table-layout: fixed;
 }
