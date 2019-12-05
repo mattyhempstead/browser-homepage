@@ -21,7 +21,7 @@ body {
 }
 
 .gmail-image-container {
-    margin-right: 3rem;
+    margin-right: 2rem;
     /* margin-left: 3rem; */
     display: inline-block;
     font-size: 1.2rem;
@@ -30,8 +30,8 @@ body {
 }
 
 .gmail-image-container img {
-    width: 5vw;
-    height: 5vw;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
 }
 
