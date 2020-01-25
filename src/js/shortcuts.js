@@ -27,6 +27,10 @@ const shortcuts = [
 ]
 
 chrome.commands.onCommand.addListener((cmd) => {
+  // Don't trigger for each new tab in a single window
+  // However, this will still trigger if different windows each have a visible new tab
+  if (document.visibilityState !== 'visible') return
+
   const hotkeyNum = parseInt(cmd.split('-')[1])
   if (hotkeyNum <= shortcuts.length) {
     shortcuts[hotkeyNum - 1].link.click()
