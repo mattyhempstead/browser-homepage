@@ -8,10 +8,11 @@ body {
     overflow: hidden;
 }
 
-.title {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+#title {
+    margin-top: 10vh;
     font-size: 3rem;
+    min-width: 1em;
+    min-height: 1em;
 }
 
 .top-left {
