@@ -48,7 +48,8 @@ body {
 }
 
 #bitcoin-price {
-    margin-top: 8em;
+    margin-top: 6em;
+    line-height: 1.5em;
 }
 
 #page-open-counter {
@@ -61,7 +62,7 @@ body {
 
 #url-hotkeys {
     margin: auto;
-    margin-top: 5em;
+    margin-top: 3em;
     width: 60%;
     min-width: 24em;
     display: table;

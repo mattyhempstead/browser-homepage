@@ -3,11 +3,16 @@ console.log("Running script.js")
 
 
 // Fetch bitcoin price
-fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT')
-.then(res => res.json())
+Promise.all([
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT'),
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT')
+])
+.then(resList => Promise.all(resList.map(res => res.json())))
 .then(data => {
   // console.log(data)
-  document.getElementById("bitcoin-price").innerHTML = `1 BTC = ${data.price} USD`
+  bitcoinPriceText = document.getElementById("bitcoin-price");
+  bitcoinPriceText.innerHTML = `1 BTC = ${data[0].price} USD`
+  bitcoinPriceText.innerHTML += `<br>1 ETH = ${data[1].price} USD`
 })
 
 
@@ -30,4 +35,10 @@ chrome.storage.sync.get('page_open_counter', data => {
 document.body.addEventListener('mousedown', (evt) => {
   if (evt.target == document.body) evt.preventDefault() 
 })
+
+
+
+// Set title
+// document.body.getElementById('title').innerHTML = new Date().to
+
 
