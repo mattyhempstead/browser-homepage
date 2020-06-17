@@ -11,8 +11,8 @@ Promise.all([
 .then(data => {
   // console.log(data)
   bitcoinPriceText = document.getElementById("bitcoin-price");
-  bitcoinPriceText.innerHTML = `1 BTC = ${data[0].price} USD`
-  bitcoinPriceText.innerHTML += `<br>1 ETH = ${data[1].price} USD`
+  bitcoinPriceText.innerHTML = `1 BTC = ${data[0].price.substring(0,8)} USD`
+  bitcoinPriceText.innerHTML += `<br>1 ETH = ${data[1].price.substring(0,8)} USD`
 })
 
 
