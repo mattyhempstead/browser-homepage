@@ -52,7 +52,7 @@ chrome.commands.getAll((cmds) => {
     const shortcut = shortcuts[shortcutIndex]
 
     const hotkeySpan = document.createElement('a')
-    hotkeySpan.setAttribute('href', shortcut.url)
+    hotkeySpan.setAttribute('href', shortcuts.url)
     hotkeysContainer.appendChild(hotkeySpan)
     shortcut.link = hotkeySpan
 
