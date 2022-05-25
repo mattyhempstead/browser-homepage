@@ -2,7 +2,11 @@
     "name": "Custom New Tab page",
     "description": "Overrides the new tab page to a custom static webpage.",
     "version": "0.3",
+    "manifest_version": 3,
     "incognito": "split",
+    "icons": {
+        "128": "icons/icon128.png"
+    },
     "chrome_url_overrides": {
         "newtab": "html/index.html"
     },
@@ -37,6 +41,5 @@
         "hotkey-9": {
             "description": "Hotkey 9"
         }
-    },
-    "manifest_version": 3
+    }
 }
