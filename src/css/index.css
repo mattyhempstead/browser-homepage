@@ -10,7 +10,7 @@ body {
 
 #title {
     margin-top: 10vh;
-    font-size: 3rem;
+    font-size: 1rem;
     min-width: 1em;
     min-height: 1em;
 }
@@ -50,6 +50,13 @@ body {
 #bitcoin-price {
     margin-top: 6em;
     line-height: 1.5em;
+}
+
+#section-time {
+    margin-top: 40vh;
+    font-size: 1rem;
+    min-width: 1em;
+    min-height: 1em;
 }
 
 #page-open-counter {
