@@ -36,9 +36,61 @@ document.body.addEventListener('mousedown', (evt) => {
 })
 
 
+
+
+
+function getLocalDateString() {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    
+    const date = new Date();
+    const dayOfWeek = days[date.getDay()];
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+
+    // Get the timezone offset in minutes and convert it to hours and minutes
+    const timezoneOffset = -date.getTimezoneOffset();
+    const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60).toString().padStart(2, '0');
+    const offsetMinutes = (Math.abs(timezoneOffset) % 60).toString().padStart(2, '0');
+    // Create a string that represents the offset with a plus or minus sign
+    const offsetSign = timezoneOffset >= 0 ? '+' : '-';
+    let timezoneString = ` ${offsetSign}${offsetHours}`;
+
+    if (offsetMinutes != "00") {
+        timezoneString += ":" + offsetMinutes;
+    }
+
+  return `${dayOfWeek}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${timezoneString}`;
+}
+
+
+function getUTCDateString() {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    
+    const date = new Date();
+    const dayOfWeek = days[date.getUTCDay()];
+    const year = date.getUTCFullYear();
+    // Month in JavaScript is 0-indexed, January is 0 and December is 11, hence the +1.
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+    const day = date.getUTCDate().toString().padStart(2, '0');
+    const hours = date.getUTCHours().toString().padStart(2, '0');
+    const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+    const seconds = date.getUTCSeconds().toString().padStart(2, '0');
+    
+    return `${dayOfWeek}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds} UTC`;
+}
+
 // Set date/time
 const updateSectionTime = () => {
-    document.querySelector('#section-time').innerHTML = new Date().toDateString() + ', ' + new Date().toLocaleTimeString();
+    // sectionTimeHTML = new Date().toDateString() + ', ' + new Date().toLocaleTimeString();
+    sectionTimeHTML = getLocalDateString();
+    sectionTimeHTML += "<br>"
+    sectionTimeHTML += getUTCDateString();
+
+    document.querySelector('#section-time').innerHTML = sectionTimeHTML;
 }
 updateSectionTime();
 setInterval(updateSectionTime, 1000);
